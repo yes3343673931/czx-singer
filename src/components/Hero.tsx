@@ -1,10 +1,32 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import eeImage from "../assets/images/EE.jpg";
+import ooImage from "../assets/images/OO.jpg";
+import yyImage from "../assets/images/YY.jpg";
 
 const CAROUSEL_ITEMS = [
   {
     id: 1,
-    src: "/src/assets/images/xxx.jpg",
+    src: eeImage,
+  }
+];
+
+// Home screen bottom photos
+const HOME_PHOTOS = [
+  {
+    id: 1,
+    src: eeImage,
+    alt: "Home Photo 1"
+  },
+  {
+    id: 2,
+    src: ooImage,
+    alt: "Home Photo 2"
+  },
+  {
+    id: 3,
+    src: yyImage,
+    alt: "Home Photo 3"
   }
 ];
 
@@ -60,6 +82,25 @@ export function Hero() {
               点击了解
             </button>
           </div>
+        </div>
+      </div>
+
+      {/* Home Screen Bottom Photos */}
+      <div className="absolute bottom-0 left-0 right-0 z-30 bg-gradient-to-t from-black/60 to-transparent h-32 flex items-center justify-center gap-4 px-8">
+        <div className="flex gap-4 max-w-7xl w-full items-center justify-center">
+          {HOME_PHOTOS.map((photo) => (
+            <motion.div
+              key={photo.id}
+              whileHover={{ scale: 1.05 }}
+              className="w-24 h-24 md:w-32 md:h-32 rounded-lg overflow-hidden shadow-lg cursor-pointer flex-shrink-0"
+            >
+              <img 
+                src={photo.src}
+                alt={photo.alt}
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
