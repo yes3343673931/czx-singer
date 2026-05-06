@@ -12,10 +12,7 @@ export function WorksSection() {
 
   return (
     <section className="py-24 md:py-32 px-8 md:px-16 lg:px-24 bg-white relative overflow-hidden">
-      {/* Background Accent */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-[#336799]/5 -skew-x-12 transform translate-x-1/2" />
-      
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1600px] mx-auto relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -55,22 +52,46 @@ export function WorksSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group cursor-pointer flex flex-col items-center text-center"
+                className={`group cursor-pointer flex flex-col items-center text-center ${index === 1 ? 'md:mt-32 lg:mt-48' : index === 2 ? 'md:mt-64 lg:mt-96' : ''}`}
               >
-                <div className="relative w-full max-w-[200px] md:max-w-[220px] lg:max-w-[260px] aspect-square mb-5 overflow-hidden rounded-sm shadow-lg transition-all duration-500 group-hover:shadow-xl group-hover:-translate-y-2">
+                <div className="relative w-full max-w-[200px] md:max-w-[240px] lg:max-w-[300px] aspect-square mb-6">
+                  {/* Vinyl Record */}
+                  <div className="absolute top-0 right-0 w-full h-full rounded-full bg-[#111] shadow-[0_0_10px_rgba(0,0,0,0.5)] flex items-center justify-center transition-transform duration-500 ease-out group-hover:translate-x-1/2 z-0 border border-neutral-800">
+                    {/* Vinyl grooves */}
+                    <div className="absolute inset-[4px] rounded-full border border-neutral-700/30" />
+                    <div className="absolute inset-[12px] rounded-full border border-neutral-700/20" />
+                    <div className="absolute inset-[24px] rounded-full border border-neutral-700/40" />
+                    <div className="absolute inset-[36px] rounded-full border border-neutral-700/20" />
+                    {/* Center Label */}
+                    <div className="w-1/3 h-1/3 rounded-full overflow-hidden relative border-2 border-neutral-800 flex items-center justify-center">
+                      <img 
+                        src={index === 0 ? "/src/assets/images/regenerated_image_1777902294632.jpg" : album.coverImage} 
+                        alt="label"
+                        className="w-full h-full object-cover opacity-80"
+                      />
+                      <div className="absolute w-[15%] h-[15%] bg-white rounded-full shadow-inner border border-neutral-300 z-10" />
+                    </div>
+                  </div>
+
+                  {/* Album Cover Sleeve */}
+                  <div className="relative w-full h-full bg-white shadow-lg overflow-hidden border border-neutral-200 z-10 transition-transform duration-500 group-hover:-translate-y-1 group-hover:shadow-xl">
+                    {/* Sleeve Spine/Shadow effect */}
+                    <div className="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-r from-black/20 to-transparent z-20 pointer-events-none" />
+                    
                     <img 
-                      src={album.coverImage} 
+                      src={index === 0 ? "/src/assets/images/regenerated_image_1777902294632.jpg" : album.coverImage} 
                       alt={album.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center backdrop-blur-sm transform scale-50 group-hover:scale-100 transition-transform duration-500">
-                      <Play className="w-5 h-5 text-white fill-current translate-x-0.5" />
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-30">
+                      <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center backdrop-blur-sm transform scale-50 group-hover:scale-100 transition-transform duration-500">
+                        <Play className="w-5 h-5 text-white fill-current translate-x-0.5" />
+                      </div>
                     </div>
                   </div>
                 </div>
                 
-                <div className="w-full max-w-[200px] md:max-w-[220px] lg:max-w-[260px]">
+                <div className="w-full max-w-[200px] md:max-w-[240px] lg:max-w-[300px]">
                   <div className="flex items-center justify-center gap-2 mb-1.5">
                     <span className="text-[9px] font-bold tracking-[0.2em] text-[#336799] px-2 py-0.5 bg-[#336799]/10 rounded-full uppercase">
                       Album
