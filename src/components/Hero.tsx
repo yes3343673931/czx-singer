@@ -52,9 +52,6 @@ export function Hero() {
       {/* Dim overlay for text readability */}
       <div className="absolute inset-0 z-10 bg-black/30 pointer-events-none"></div>
 
-      {/* Styled Right Overlay (like reference) */}
-      <div className="absolute top-0 right-1/4 bottom-0 w-1/4 z-10 bg-purple-900/40 mix-blend-overlay pointer-events-none skew-x-[-10deg] scale-150 origin-bottom"></div>
-
       {/* Center Text Layout like reference */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center pointer-events-none px-4">
         <div className="text-center text-white">
