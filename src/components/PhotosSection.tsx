@@ -1,39 +1,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MapPin, Download, Heart, ChevronLeft, ChevronRight } from "lucide-react";
-import photo1 from "../assets/images/regenerated_image_1777892254380.jpg";
-import photo2 from "../assets/images/regenerated_image_1777892255827.jpg";
-import photo3 from "../assets/images/regenerated_image_1777892257166.jpg";
 
 const CATEGORIES = ["ALL", "CONCERT", "DAILY", "MAGAZINE"];
 
 const PHOTOS = [
   {
     id: 1,
-    url: photo1,
-    location: "Königssee, Germany",
-    downloads: 1400,
-    saves: 320,
-    category: "DAILY",
-  },
-  {
-    id: 2,
-    url: photo2,
-    location: "Cappadocia, Turkey",
-    downloads: 1290,
-    saves: 450,
-    category: "MAGAZINE",
-  },
-  {
-    id: 3,
-    url: photo3,
-    location: "Pragser Wildsee, Italy",
-    downloads: 1690,
-    saves: 500,
-    category: "DAILY",
-  },
-  {
-    id: 4,
     url: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&q=80&w=800",
     location: "Sydney Opera House",
     downloads: 2100,
@@ -41,7 +14,7 @@ const PHOTOS = [
     category: "CONCERT",
   },
   {
-    id: 5,
+    id: 2,
     url: "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=800",
     location: "Yosemite Valley",
     downloads: 980,
@@ -49,7 +22,7 @@ const PHOTOS = [
     category: "DAILY",
   },
   {
-    id: 6,
+    id: 3,
     url: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&q=80&w=800",
     location: "Shanghai Tower",
     downloads: 3400,
@@ -57,7 +30,7 @@ const PHOTOS = [
     category: "MAGAZINE",
   },
   {
-    id: 7,
+    id: 4,
     url: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&q=80&w=800",
     location: "Paris, France",
     downloads: 4200,
@@ -65,7 +38,7 @@ const PHOTOS = [
     category: "MAGAZINE",
   },
   {
-    id: 8,
+    id: 5,
     url: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800",
     location: "Tokyo, Japan",
     downloads: 3100,
@@ -73,7 +46,7 @@ const PHOTOS = [
     category: "DAILY",
   },
   {
-    id: 9,
+    id: 6,
     url: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&q=80&w=800",
     location: "Venice, Italy",
     downloads: 2800,

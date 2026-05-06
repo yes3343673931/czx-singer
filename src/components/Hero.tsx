@@ -74,6 +74,41 @@ export function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Bottom Carousel Section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 md:h-40 z-30 bg-gradient-to-t from-black/80 to-transparent">
+        <div className="relative w-full h-full flex items-center justify-center px-4">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`carousel-${currentIndex}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="w-full h-full flex items-center justify-center gap-3 md:gap-6"
+            >
+              {CAROUSEL_ITEMS.map((item) => (
+                <motion.div
+                  key={item.id}
+                  whileHover={{ scale: 1.05 }}
+                  className={`flex-shrink-0 rounded-lg overflow-hidden cursor-pointer transition-all ${
+                    currentIndex === item.id - 1 
+                      ? "w-24 h-24 md:w-32 md:h-32 ring-2 ring-white shadow-lg" 
+                      : "w-16 h-16 md:w-24 md:h-24 opacity-60 hover:opacity-80"
+                  }`}
+                  onClick={() => setCurrentIndex(item.id - 1)}
+                >
+                  <img 
+                    src={item.src}
+                    alt={`carousel-${item.id}`}
+                    className="w-full h-full object-cover"
+                  />
+                </motion.div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
     </section>
   );
 }
