@@ -63,7 +63,7 @@ const StackItem: React.FC<StackItemProps> = ({
       <motion.div 
         layoutId={`album-cover-${album.id}`}
         onClick={() => onPlay(album)}
-        className="group relative w-56 h-56 md:w-72 md:h-72 lg:w-[320px] lg:h-[420px] cursor-pointer rounded-[40px] p-2 bg-white/5 backdrop-blur-2xl border border-white/40 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 hover:shadow-[0_20px_100px_rgba(255,255,255,0.4)] hover:-translate-y-2 overflow-hidden"
+        className="group relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 cursor-pointer rounded-[40px] p-2 bg-white/5 backdrop-blur-2xl border border-white/40 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 hover:shadow-[0_20px_100px_rgba(255,255,255,0.4)] hover:-translate-y-2 overflow-hidden"
       >
         <div className="w-full h-full rounded-[32px] overflow-hidden relative">
           <img 

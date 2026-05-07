@@ -1,9 +1,14 @@
-import photo from "../assets/images/regenerated_image_1777891429113.jpg";
-import album2 from "../assets/images/regenerated_image_1777892258192.jpg";
-import album3 from "../assets/images/regenerated_image_1777892259010.jpg";
-import album4 from "../assets/images/regenerated_image_1777892259600.jpg";
-import album7 from "../assets/images/regenerated_image_1777892260263.jpg";
-import album8 from "../assets/images/regenerated_image_1777892261105.jpg";
+import er1 from "../assets/images/er1.jpg";
+import yw1 from "../assets/images/yw1.jpg";
+import wrd1 from "../assets/images/wrd1.jpg";
+import hx1 from "../assets/images/hx1.jpg";
+import jyd1 from "../assets/images/jyd1.jpg";
+import hyt1 from "../assets/images/hyt1.jpg";
+import kk from "../assets/images/kk.jpg";
+import biue from "../assets/images/biue.jpg";
+import zyf from "../assets/images/zyf.jpg";
+import hdxt from "../assets/images/hdxt.jpg";
+import llk from "../assets/images/llk.jpg";
 
 export interface Track {
   id: string;
@@ -25,7 +30,7 @@ export const ALBUMS: Album[] = [
     id: "a1",
     title: "而已",
     releaseYear: "2023",
-    coverImage: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+    coverImage: er1,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t1_1", title: "而已", duration: "03:45" },
@@ -35,7 +40,7 @@ export const ALBUMS: Album[] = [
     id: "a2",
     title: "愿忘",
     releaseYear: "2023",
-    coverImage: album2,
+    coverImage: yw1,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t2_1", title: "愿忘", duration: "04:05" },
@@ -45,7 +50,7 @@ export const ALBUMS: Album[] = [
     id: "a3",
     title: "无人岛",
     releaseYear: "2023",
-    coverImage: album3,
+    coverImage: wrd1,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t3_1", title: "无人岛", duration: "03:50" },
@@ -55,7 +60,7 @@ export const ALBUMS: Album[] = [
     id: "a4",
     title: "化雪",
     releaseYear: "2023",
-    coverImage: album4,
+    coverImage: hx1,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t4_1", title: "化雪", duration: "04:15" },
@@ -65,7 +70,7 @@ export const ALBUMS: Album[] = [
     id: "a5",
     title: "记忆点",
     releaseYear: "2023",
-    coverImage: photo,
+    coverImage: jyd1,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t5_1", title: "记忆点", duration: "03:30" },
@@ -75,7 +80,7 @@ export const ALBUMS: Album[] = [
     id: "a6",
     title: "海与天之间",
     releaseYear: "2023",
-    coverImage: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&q=80",
+    coverImage: hyt1,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t6_1", title: "海与天之间", duration: "04:00" },
@@ -85,7 +90,7 @@ export const ALBUMS: Album[] = [
     id: "a7",
     title: "转身走向你",
     releaseYear: "2023",
-    coverImage: album7,
+    coverImage: kk,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t7_1", title: "转身走向你", duration: "03:48" },
@@ -95,7 +100,7 @@ export const ALBUMS: Album[] = [
     id: "a8",
     title: "深海之息(Mareasía)",
     releaseYear: "2023",
-    coverImage: album8,
+    coverImage: biue,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t8_1", title: "深海之息(Mareasía)", duration: "04:22" },
@@ -105,7 +110,7 @@ export const ALBUMS: Album[] = [
     id: "a9",
     title: "昨夜风今宵月",
     releaseYear: "2023",
-    coverImage: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
+    coverImage: zyf,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t9_1", title: "昨夜风今宵月", duration: "03:55" },
@@ -115,7 +120,7 @@ export const ALBUMS: Album[] = [
     id: "a10",
     title: "回到夏天",
     releaseYear: "2023",
-    coverImage: "https://images.unsplash.com/photo-1475113548554-5a36f1f523d6?w=800&q=80",
+    coverImage: hdxt,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t10_1", title: "回到夏天", duration: "03:42" },
