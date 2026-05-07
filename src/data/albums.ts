@@ -130,7 +130,7 @@ export const ALBUMS: Album[] = [
     id: "a11",
     title: "That's Right",
     releaseYear: "2023",
-    coverImage: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+    coverImage: album11,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t11_1", title: "That's Right", duration: "03:15" },
@@ -140,7 +140,7 @@ export const ALBUMS: Album[] = [
     id: "a12",
     title: "听说你",
     releaseYear: "2023",
-    coverImage: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=800&q=80",
+    coverImage: album12,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t12_1", title: "听说你", duration: "04:02" },
@@ -150,7 +150,7 @@ export const ALBUMS: Album[] = [
     id: "a13",
     title: "慢慢",
     releaseYear: "2023",
-    coverImage: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+    coverImage: album13,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t13_1", title: "慢慢", duration: "03:45" },
@@ -160,7 +160,7 @@ export const ALBUMS: Album[] = [
     id: "a14",
     title: "我怀念的那个夏天",
     releaseYear: "2023",
-    coverImage: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80",
+    coverImage: album14,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t14_1", title: "我怀念的那个夏天", duration: "04:10" },
@@ -170,7 +170,7 @@ export const ALBUMS: Album[] = [
     id: "a15",
     title: "感应",
     releaseYear: "2023",
-    coverImage: "https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?w=800&q=80",
+    coverImage: album15,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t15_1", title: "感应", duration: "03:33" },
@@ -180,7 +180,7 @@ export const ALBUMS: Album[] = [
     id: "a16",
     title: "流沙",
     releaseYear: "2023",
-    coverImage: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&q=80",
+    coverImage: album16,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t16_1", title: "流沙", duration: "04:20" },
@@ -190,7 +190,7 @@ export const ALBUMS: Album[] = [
     id: "a17",
     title: "莫斯科没有眼泪",
     releaseYear: "2023",
-    coverImage: "https://images.unsplash.com/photo-1434725039720-aaad6dd32dfe?w=800&q=80",
+    coverImage: album17,
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t17_1", title: "莫斯科没有眼泪", duration: "04:08" },
@@ -200,7 +200,7 @@ export const ALBUMS: Album[] = [
     id: "a18",
     title: "不降落飞行指南",
     releaseYear: "2024",
-    coverImage: "https://images.unsplash.com/photo-1514525253361-b83f859b73c0?w=800&q=80",
+    coverImage: album18,
     description: "Chen Zhuoxuan's first personal physical album.",
     tracks: [
       { id: "t18_1", title: "不降落飞行指南", duration: "03:55" },
