@@ -90,8 +90,8 @@ export function Hero() {
                   whileHover={{ scale: 1.05 }}
                   className={`flex-shrink-0 rounded-lg overflow-hidden cursor-pointer transition-all ${
                     currentIndex === item.id - 1 
-                      ? "w-16 h-16 md:w-24 md:h-24 ring-2 ring-white shadow-lg" 
-                      : "w-10 h-10 md:w-16 md:h-16 opacity-60 hover:opacity-80"
+                      ? "w-8 h-8 md:w-12 md:h-12 ring-2 ring-white shadow-lg" 
+                      : "w-5 h-5 md:w-8 md:h-8 opacity-60 hover:opacity-80"
                   }`}
                   onClick={() => setCurrentIndex(item.id - 1)}
                 >
