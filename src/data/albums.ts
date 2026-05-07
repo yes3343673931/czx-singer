@@ -9,6 +9,14 @@ import biue from "../assets/images/biue.jpg";
 import zyf from "../assets/images/zyf.jpg";
 import hdxt from "../assets/images/hdxt.jpg";
 import llk from "../assets/images/llk.jpg";
+import album11 from "../assets/images/EE.jpg";
+import album12 from "../assets/images/OO.jpg";
+import album13 from "../assets/images/YY.jpg";
+import album14 from "../assets/images/xxx.jpg.jpg";
+import album15 from "../assets/images/8.jpg";
+import album16 from "../assets/images/9.jpg";
+import album17 from "../assets/images/10g.jpg";
+import album18 from "../assets/images/2.jpg";
 
 export interface Track {
   id: string;
