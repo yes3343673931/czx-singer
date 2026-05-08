@@ -4,6 +4,9 @@ import wrd1 from "../assets/images/wrd1.jpg";
 import hx1 from "../assets/images/hx1.jpg";
 import jyd1 from "../assets/images/jyd1.jpg";
 import hyt1 from "../assets/images/hyt1.jpg";
+import kk from "../assets/images/kk.jpg";
+import biue from "../assets/images/biue.jpg";
+import llk from "../assets/images/llk.jpg";
 import album11 from "../assets/images/t.jpg";
 import album12 from "../assets/images/tsn.jpg";
 import album13 from "../assets/images/bule5.jpg";
@@ -86,6 +89,36 @@ export const ALBUMS: Album[] = [
     description: "Chen Zhuoxuan's release.",
     tracks: [
       { id: "t6_1", title: "海与天之间", duration: "04:00" },
+    ]
+  },
+  {
+    id: "a7",
+    title: "转身走向你",
+    releaseYear: "2023",
+    coverImage: kk,
+    description: "Chen Zhuoxuan's release.",
+    tracks: [
+      { id: "t7_1", title: "转身走向你", duration: "03:48" },
+    ]
+  },
+  {
+    id: "a8",
+    title: "深海之息(Mareasía)",
+    releaseYear: "2023",
+    coverImage: biue,
+    description: "Chen Zhuoxuan's release.",
+    tracks: [
+      { id: "t8_1", title: "深海之息(Mareasía)", duration: "04:22" },
+    ]
+  },
+  {
+    id: "a18",
+    title: "不降落飞行指南",
+    releaseYear: "2024",
+    coverImage: llk,
+    description: "Chen Zhuoxuan's first personal physical album.",
+    tracks: [
+      { id: "t18_1", title: "不降落飞行指南", duration: "03:55" },
     ]
   },
   {

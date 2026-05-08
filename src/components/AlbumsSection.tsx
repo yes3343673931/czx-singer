@@ -10,13 +10,15 @@ interface StackItemProps {
   i: number;
   progressValue: any;
   onPlay: (album: Album) => void;
+  totalCount: number;
 }
 
 const StackItem: React.FC<StackItemProps> = ({ 
   album, 
   i, 
   progressValue, 
-  onPlay 
+  onPlay,
+  totalCount
 }) => {
   const diff = useTransform(progressValue, (p: number) => i - p);
   
@@ -41,7 +43,7 @@ const StackItem: React.FC<StackItemProps> = ({
     if (d <= 5) return 1 - (d * 0.15);
     return 0;
   });
-  const zIndex = ALBUMS.length - i;
+  const zIndex = totalCount - i;
   
   // Fog overlay increases as cards go deeper into the background
   const fogOpacity = useTransform(diff, (d: number) => {
@@ -97,6 +99,9 @@ export function AlbumsSection() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [viewingAlbum, setViewingAlbum] = useState<Album | null>(null);
 
+  // Filter out the three featured works albums for the singles section
+  const displayAlbums = ALBUMS.filter(album => !["a7", "a8", "a18"].includes(album.id));
+
   const containerRef = useRef<HTMLDivElement>(null);
   const stackRef = useRef<HTMLDivElement>(null);
   
@@ -116,10 +121,10 @@ export function AlbumsSection() {
       const current = progressValue.get();
       // Adjust sensitivity: higher value means faster scroll
       const delta = e.deltaY * 0.005; 
-      const next = Math.max(0, Math.min(ALBUMS.length - 1, current + delta));
+      const next = Math.max(0, Math.min(displayAlbums.length - 1, current + delta));
 
       // Capture scroll if we are within boundaries or moving into them
-      if ((delta > 0 && current < ALBUMS.length - 1) || (delta < 0 && current > 0)) {
+      if ((delta > 0 && current < displayAlbums.length - 1) || (delta < 0 && current > 0)) {
         e.preventDefault();
         progressValue.set(next);
       }
@@ -155,9 +160,9 @@ export function AlbumsSection() {
   };
 
   const handlePlayAll = () => {
-    if (ALBUMS.length > 0 && ALBUMS[0].tracks.length > 0) {
-      setSelectedAlbum(ALBUMS[0]);
-      setCurrentTrack(ALBUMS[0].tracks[0]);
+    if (displayAlbums.length > 0 && displayAlbums[0].tracks.length > 0) {
+      setSelectedAlbum(displayAlbums[0]);
+      setCurrentTrack(displayAlbums[0].tracks[0]);
       setIsPlaying(true);
     }
   };
@@ -203,13 +208,14 @@ export function AlbumsSection() {
           className="absolute inset-0 z-10 cursor-ns-resize" 
           style={{ perspective: "1500px" }}
         >
-          {ALBUMS.map((album, index) => (
+          {displayAlbums.map((album, index) => (
             <StackItem 
                 key={album.id} 
                 album={album} 
                 i={index} 
                 progressValue={internalProgressValue} 
                 onPlay={handlePlayAlbum}
+                totalCount={displayAlbums.length}
             />
           ))}
         </div>
