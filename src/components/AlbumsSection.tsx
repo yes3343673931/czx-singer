@@ -179,7 +179,7 @@ export function AlbumsSection() {
         {/* Section Title */}
         <div className="absolute top-12 md:top-24 left-8 md:left-24 z-20 pointer-events-none">
           <h2 className="text-4xl md:text-5xl font-light text-neutral-800 tracking-wider uppercase mb-2">
-            DISCOGRAPHY
+            单曲
           </h2>
           <p className="text-sm md:text-base font-light tracking-widest uppercase text-ocean-800/60">
             Scroll to explore / 滑动探索
